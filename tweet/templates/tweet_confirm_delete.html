@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Chai Aur Tweet
+{% endblock  %}
+
+{% block content %}
+  
+  <h1 class="text-center mt-4">Are you sur that you want to delete this tweet ?</h1>
+
+
+  <form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">Detelte</button>
+    <a class="btn btn-success" href="{% url 'tweet_list' %}">Cancel</a>
+  </form>
+{% endblock  %}
